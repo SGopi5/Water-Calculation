@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading"> welcome </h1>
+    value: <input id="inp" type="text">
+    <button onclick="fetchvalue()"> calculate </button><br>
+    <h3 id="result">  </h3>
+    <script>
+        function fetchvalue()
+        {
+            let c=document.getElementById("inp").value
+            document.getElementById("result").textContent=c**2
+            //document.getElementById("heading").textContent="test"
+            document.getElementById("heading").style.display="none"
+
+        }
+        
+    </script>
+</body>
+</html>

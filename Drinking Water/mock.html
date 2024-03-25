@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Animation</title>
+    <style>
+        #animatedBox {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="animatedBox"></div>
+
+    <script>
+        const animatedBox = document.getElementById("animatedBox");
+        let position = 0;
+
+        function animate() {
+            if (position < 300) { // Stop the animation after a certain position
+                position += 1;
+                animatedBox.style.left = position + "px";
+                requestAnimationFrame(animate);
+            }
+        }
+
+        animate(); // Start the animation
+    </script>
+</body>
+</html>
